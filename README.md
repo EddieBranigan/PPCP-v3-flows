@@ -11,7 +11,13 @@ Install the packages from the package-json file by typing into terminal:
 npm install
 ```
 
-Make sure to create a .env file with your gateway credentials in it. An example is provided ('example.env').
+Create a .env file in the route of your project folder with your PPCP credentials in it, [following this guide](https://developer.paypal.com/api/rest/#link-getclientidandclientsecret). See example below:
+
+```
+PAYPAL_CLIENT_ID='YOUR CLIENT ID GOES HERE'
+PAYPAL_CLIENT_SECRET='YOUR CLIENT SECRET GOES HERE'
+MERCHANT_ID='MERCHANT ID FOR your sandbox business account'
+```
 
 ## Start the server
 Start the server by typing into terminal:
