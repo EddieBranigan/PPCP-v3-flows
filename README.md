@@ -16,7 +16,7 @@ node server.js
 ```
 
 ## Testing
-Testing in the PayPal sandbox environment can be done by creating test Sandbox personal and business accounts as described here in the ['https://developer.paypal.com/tools/sandbox/accounts/'](#official developer documentation here).
+Testing in the PayPal sandbox environment can be done by creating test Sandbox personal and business accounts as described here in the [official developer documentation here](https://developer.paypal.com/tools/sandbox/accounts/).
 
 ## Payment flow
 First, visit the index page at http://localhost:8000 and click the new customer button. Login to your test personal account and complete the flow. After, return to the index page and select the returning customer button. Click the one-click button to experience the returning customer flow.
