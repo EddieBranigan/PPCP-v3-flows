@@ -1,0 +1,243 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f7fa;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navigation Styles */
+.payment-navbar {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.navbar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.nav-button {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    background: transparent;
+    border: 2px solid #0070ba;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+.nav-button a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    width: 100%;
+    height: 100%;
+    color: #0070ba;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.nav-button:hover {
+    background: #0070ba;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 112, 186, 0.2);
+}
+
+.nav-button:hover a {
+    color: white;
+}
+
+.nav-button:hover .btn-icon {
+    color: white;
+}
+
+.btn-icon {
+    font-size: 20px;
+    color: #0070ba;
+    transition: color 0.2s ease;
+}
+
+.btn-text {
+    font-size: 16px;
+    font-weight: 500;
+    flex: 1;
+    text-align: left;
+}
+
+/* Specific button styles - PayPal themed */
+.new-customer-btn {
+    border-color: #0070ba;
+}
+
+.returning-customer-btn {
+    border-color: #003087;
+}
+
+.returning-customer-btn:hover {
+    background: #003087;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin: 0 0 30px;
+    font-weight: 700;
+    animation: fadeIn 0.8s ease-out;
+}
+
+h3 {
+    text-align: center;
+    color: #546e7a;
+    font-size: 1.2em;
+    font-weight: 400;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+    animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+/* Links */
+h3 a {
+    color: #0070ba;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+h3 a:hover {
+    color: #003087;
+    text-decoration: underline;
+}
+
+/* PayPal Button Container */
+#paypal-button-container {
+    max-width: 750px;
+    min-width: 400px;
+    min-height: 200px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-out 0.4s both;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Result Message */
+#result-message {
+    text-align: left;
+    padding: 16px 20px;
+    margin: 30px auto;
+    max-width: 750px;
+    border-radius: 6px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    animation: fadeIn 0.5s ease-out;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: auto;
+}
+
+#result-message:not(:empty) {
+    background: #f6f8fa;
+    color: #24292e;
+    border: 1px solid #d1d5da;
+}
+
+#result-message.error {
+    background: #ffeef0;
+    color: #9e1c23;
+    border: 1px solid #f97583;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 2em;
+        margin: 30px 0 20px;
+    }
+    
+    h3 {
+        font-size: 1.1em;
+        margin-bottom: 30px;
+    }
+    
+    .navbar-container {
+        flex-direction: column;
+    }
+    
+    .nav-button {
+        min-width: 100%;
+    }
+    
+    #paypal-button-container {
+        min-width: 350px;
+        padding: 30px;
+        margin: 30px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.75em;
+    }
+    
+    h3 {
+        font-size: 1em;
+    }
+    
+    .nav-button {
+        padding: 14px 20px;
+    }
+    
+    .btn-text {
+        font-size: 14px;
+    }
+    
+    #paypal-button-container {
+        min-width: 300px;
+        padding: 20px;
+    }
+}
