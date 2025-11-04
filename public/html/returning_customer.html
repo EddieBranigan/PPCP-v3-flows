@@ -11,7 +11,12 @@
 <body>
     <h1>Save PayPal for purchase later</h1>
     <h3>Returning customer flow.</h3>
-    <div id="paypal-button-container"></div>
+    <form id="tokenForm">
+        <label for="tokenId">Customer token id:</label>
+        <input type="text" id="tokenId" name="tokenId" value="fpQIroiYPJ">
+        <input type="submit" value="Submit">
+    </form>
+    <div id="paypal-button-container" style="display: none;"></div>
     <p id="result-message"></p>
     <script src="js/re_script.js"></script>
 </body>

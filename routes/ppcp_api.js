@@ -25,6 +25,14 @@ async function getAccessToken() {
   return data.access_token;
 }
 
+/*
+Set pre-transaction Context for PayPal risk servers. this is a requirement for some merchants in high risk verticals.
+https://developer.paypal.com/limited-release/raas/how-to/integrate-express-checkout/rest-api/
+*/
+async function setTransactionContext() {
+
+}
+
 // Endpoint for requesting an id token with or without customer id
 router.post('/id_token', async (req, res) => {
   const target_customer_id = req.body.target_customer_id;
