@@ -32,11 +32,10 @@ Testing in the PayPal sandbox environment can be done by creating test Sandbox p
 Next, go back to the index.html page and click the returning customer button.
 3. Enter the stored payment id into the form and click submit. This will initialise the client-side sdk with the customers stored payment method and provide the one-click checkout button.
 4. Click the PayPal button to see the server response.
+5. First, visit the index page at http://localhost:8000 and click the new customer button. Login to your test personal account and complete the flow. After, return to the index page and select the returning customer button. Click the one-click button to experience the returning customer flow.
 
 <img width="504" height="289" alt="image" src="https://github.com/user-attachments/assets/3f85f39f-c847-49d1-99c0-d35ddd61e510" />
 <img width="780" height="296" alt="image" src="https://github.com/user-attachments/assets/f811baa5-9bb0-40b2-93f0-e31d2652f729" />
 
-## Payment flow
-First, visit the index page at http://localhost:8000 and click the new customer button. Login to your test personal account and complete the flow. After, return to the index page and select the returning customer button. Click the one-click button to experience the returning customer flow.
 ## Disclaimer
 This repository is for illustrative purposes only and shouldn't be used directly in a live environment.
