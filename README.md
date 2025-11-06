@@ -3,7 +3,7 @@ A simple PPCP server built in NodeJS with express framework and using the PayPal
 
 The developer documentation for this flow can be viewed from [this link on the paypal developer website](https://developer.paypal.com/docs/checkout/save-payment-methods/purchase-later/js-sdk/paypal/).
 
-This is a proof of concept Demo and not a production ready solution.
+This is a proof of concept demo and should not be used directly in a production environment.
 
 ## Setup instructions
 Install the packages from the package-json file by typing into terminal:
