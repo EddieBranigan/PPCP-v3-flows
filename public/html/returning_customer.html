@@ -14,11 +14,24 @@
     <form id="tokenForm">
         <label for="tokenId">Customer token id:</label>
         <input type="text" id="tokenId" name="tokenId" value="fpQIroiYPJ">
+        <fieldset>
+  <legend>Paylater</legend>
+
+  <div>
+    <input type="checkbox" id="paylaterButton" name="paylaterButton" checked />
+    <label for="paylaterButton">Paylater button?</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="paylaterMessage" name="paylaterMessage" />
+    <label for="paylaterMessage">Paylater messaging?</label>
+  </div>
+</fieldset>
         <input type="submit" value="Submit">
     </form>
     <div id="paypal-button-container" style="display: none;"></div>
     <p id="result-message"></p>
-    <script src="js/re_script.js"></script>
+    <script type="text/javascript" src="js/re_script.js"></script>
 </body>
 
 </html>

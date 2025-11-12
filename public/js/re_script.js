@@ -24,7 +24,7 @@ function initializePayPal(target_customer_id) {
             document.getElementById('paypal-button-container').style.display = 'block';
             const script = document.createElement('script');
             const client_id = 'AcsTRn5GN9sdosRRuixP91uCTs7Dr0xUl4QnfEjvIJ-hwLDgOMznPDiChneAx281JjYHMINaGH7DpRZm';
-            script.src = `https://www.paypal.com/sdk/js?client-id=${client_id}`;
+            script.src = `https://www.paypal.com/sdk/js?client-id=${client_id}&disable-funding=card&enable-funding=paylater&buyer-country=GB&components=messages,buttons&currency=GBP`;
             script.setAttribute('data-user-id-token', id_token);
             document.body.appendChild(script);
 
@@ -32,7 +32,7 @@ function initializePayPal(target_customer_id) {
                 console.log('PayPal SDK loaded with token');
                 window.paypal.Buttons({
 
-                    fundingSource: paypal.FUNDING.PAYPAL,
+                    // fundingSource: paypal.FUNDING.PAYPAL,
 
                     // Request an order to be created on your server and sent back to client
                     createOrder: async () => {

@@ -167,7 +167,7 @@ router.post('/create_order', async (req, res) => {
       purchase_units: [
         {
           amount: {
-            currency_code: "USD",
+            currency_code: "GBP",
             value: '50.00'
           },
           description: "Purchase from Your Store"
@@ -177,7 +177,7 @@ router.post('/create_order', async (req, res) => {
         paypal: {
           experience_context: {
             payment_method_preference: "IMMEDIATE_PAYMENT_REQUIRED",
-            locale: "en-US",
+            locale: "en-GB",
             shipping_preference: "NO_SHIPPING",
             user_action: "PAY_NOW",
             return_url: "https://yourdomain.com/success",
