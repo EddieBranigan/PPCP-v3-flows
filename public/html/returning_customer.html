@@ -2,36 +2,20 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Returning customer flow</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Returning customer flow</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1>Save PayPal for purchase later</h1>
-    <h3>Returning customer flow.</h3>
-    <form id="tokenForm">
-        <label for="tokenId">Customer token id:</label>
-        <input type="text" id="tokenId" name="tokenId" value="fpQIroiYPJ">
-        <fieldset>
-  <legend>Paylater</legend>
-
-  <div>
-    <input type="checkbox" id="paylaterButton" name="paylaterButton" checked />
-    <label for="paylaterButton">Paylater button?</label>
-  </div>
-
-  <div>
-    <input type="checkbox" id="paylaterMessage" name="paylaterMessage" />
-    <label for="paylaterMessage">Paylater messaging?</label>
-  </div>
-</fieldset>
-        <input type="submit" value="Submit">
-    </form>
-    <div id="paypal-button-container" style="display: none;"></div>
-    <p id="result-message"></p>
-    <script type="text/javascript" src="js/re_script.js"></script>
+  <h1>Returning customer payment flow</h1>
+  <h3>The below demo is decribed in the developer documentation located <a
+      href="https://developer.paypal.com/docs/checkout/save-payment-methods/purchase-later/js-sdk/paypal/">here.</a> Please note Paylater as a payment method is limited to specific payment flows, verticals and markets. For more information, <a href="https://www.paypal.com/uk/business/accept-payments/installment-payments">visit this link.</a>
+  </h3>
+  <div id="paypal-button-container"></div>
+  <p id="result-message"></p>
+  <script type="text/javascript" src="js/re_script.js"></script>
 </body>
 
 </html>

@@ -1,16 +1,8 @@
-document.getElementById('tokenForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const tokenIdValue = document.getElementById('tokenId').value.trim();
-    document.getElementById('tokenForm').style.display = 'none';
-    document.getElementById('result-message').textContent = 'Loading PayPal SDK...';
-    initializePayPal(tokenIdValue);
-});
-
-function initializePayPal(target_customer_id) {
+function initializePayPal() {
     fetch('/ppcp_api/id_token', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ target_customer_id: target_customer_id })
+        body: JSON.stringify({ target_customer_id: 'fpQIroiYPJ' })
     })
         .then(response => response.json())
         .then(data => {
@@ -31,8 +23,6 @@ function initializePayPal(target_customer_id) {
             script.onload = () => {
                 console.log('PayPal SDK loaded with token');
                 window.paypal.Buttons({
-
-                    // fundingSource: paypal.FUNDING.PAYPAL,
 
                     // Request an order to be created on your server and sent back to client
                     createOrder: async () => {
@@ -83,3 +73,5 @@ function initializePayPal(target_customer_id) {
             document.getElementById('tokenForm').style.display = 'block';
         });
 }
+
+initializePayPal();
