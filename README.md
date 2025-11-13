@@ -27,12 +27,12 @@ node server.js
 
 ## Testing
 Testing in the PayPal sandbox environment can be done by creating test Sandbox personal and business accounts as described here in the [official developer documentation here](https://developer.paypal.com/tools/sandbox/accounts/).
-1. From index.html page, click the new customer button and login to your personal sandbox account.
-2. After logging into your account and agreeing to have your payment method stored, make note of the stored payment id, which is needed for the next step.
-Next, go back to the index.html page and click the returning customer button.
-3. Enter the stored payment id into the form and click submit. This will initialise the client-side sdk with the customers stored payment method and provide the one-click checkout button.
-4. Click the PayPal button to see the server response.
-5. First, visit the index page at http://localhost:8000 and click the new customer button. Login to your test personal account and complete the flow. After, return to the index page and select the returning customer button. Click the one-click button to experience the returning customer flow.
+1. First, visit the index page at http://localhost:8000 and click the new customer button.
+2. From new_customer.html page, click the PayPal button and login to your personal sandbox account.
+3. After logging into your account and agreeing to have your payment method stored with the merchant, return to the index.html webpage.
+4. Click the returning customer flow button.
+5. Click the PayPal button to complete a one-click buying experience and see the server response for the successful capture of the payment.
+   
 
 ## Disclaimer
 This repository is for illustrative purposes only and shouldn't be used directly in a live environment.
